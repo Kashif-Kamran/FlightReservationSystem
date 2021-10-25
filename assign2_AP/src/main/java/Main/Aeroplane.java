@@ -5,49 +5,52 @@ public class Aeroplane
 	private int aeroId;
 	private String aeroName;
 	private int passangerCapacity;
-	private static int incriment;
 
 	// Contructor
 	public Aeroplane()
 	{
-		aeroId = incriment;
+		aeroId = -1;
 		aeroName = "";
 		passangerCapacity = -1;
-		incriment++;
 	}
 
-	public Aeroplane(String name, int capacity)
+	public Aeroplane(int id, String name, int capacity)
 	{
-		incriment = 1;
-		aeroId = incriment;
+		aeroId = id;
 		aeroName = name;
 		passangerCapacity = capacity;
-		incriment++;
 	}
 
-	void setName(String name)
+	public void setName(String name)
 	{
 		aeroName = name;
 	}
 
-	void setPesCap(int cap)
+	public void setPesCap(int cap)
 	{
 		passangerCapacity = cap;
 	}
 
 	// getters
-	int getCapacity()
+	public int getCapacity()
 	{
 		return passangerCapacity;
 	}
 
-	String getName()
+	public String getName()
 	{
 		return aeroName;
 	}
 
-	int getId()
+	public int getId()
 	{
 		return aeroId;
+	}
+
+	public void showdetails()
+	{
+		System.out.println("Name: " + aeroName);
+		System.out.println("Plane ID : " + aeroId);
+		System.out.println("Passanger Capacity : " + passangerCapacity);
 	}
 }

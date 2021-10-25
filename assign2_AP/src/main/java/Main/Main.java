@@ -1,24 +1,22 @@
 package Main;
 
-import Reservations.code.Reservation;
-
 public class Main
 {
 	public static void main(String[] arg)
 	{
-		// Reservation
-		Reservation reserv = new Reservation(5, 10, 20);
-		for (int i = 0; i <= 14; i++)
-		{
-			reserv.bookEcoSeat(i);
-		}
-		reserv.showAllSeats();
-		for (int i = 0; i <= 3; i++)
-		{
-			reserv.unBookEcoSeat(i);
-		}
-		// reserv.showAllSeats();
-		reserv.showAvailableSeats();
-
+		// LinkedList<String> location = new LinkedList();
+		// location.add("Karachi");
+		// location.add("Islamabad");
+		//
+		// Flight fli = new Flight(1, "Amirates", 10, 30, 60);
+		// fli.showFlightDetails();
+		// fli.setLocation("Karachi", "Islamabad");
+		// fli.showFlightDetails();
+		Locations loc = new Locations();
+		loc.addLocation("Karachi");
+		loc.addLocation("Islamabad");
+		loc.addLocation("Rahimyar Khan");
+		loc.addLocation("Lahore");
+		loc.addLocation("Rawalpindi");
 	}
 }

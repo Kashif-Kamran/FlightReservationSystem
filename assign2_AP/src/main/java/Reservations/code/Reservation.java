@@ -157,4 +157,34 @@ public class Reservation
 		int total = fstSeats.getTotSeats() + busSeats.getTotSeats() + ecoSeats.getTotSeats();
 		return total;
 	}
+
+	public int getFstTotSeats()
+	{
+		return fstSeats.getTotSeats();
+	}
+
+	public int getBusTotSeats()
+	{
+		return busSeats.getTotSeats();
+	}
+
+	public int getEcoTotSeats()
+	{
+		return ecoSeats.getTotSeats();
+	}
+
+	public int getFstReserveSeats()
+	{
+		return fstSeats.getTotalReservedSeats();
+	}
+
+	public int getEcoReserveSeats()
+	{
+		return ecoSeats.getTotalReservedSeats();
+	}
+
+	public int getBusReserveSeats()
+	{
+		return busSeats.getTotalReservedSeats();
+	}
 }
